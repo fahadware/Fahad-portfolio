@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahad Ali - Full Stack Engineer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MainStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Profile Switcher Button -->
+    <div class="profile-switcher" id="profileSwitcher">
+        <img src="orange.jpg" alt="Recruiter" class="profile-switcher-avatar">
+        <span class="profile-switcher-name">Recruiter</span>
+        <i class="fas fa-chevron-down profile-switcher-icon"></i>
+    </div>
+
+    <!-- Profile Dropdown Menu -->
+    <div class="profile-dropdown-menu" id="profileDropdownMenu">
+        <div class="profile-dropdown-header">
+            <img src="orange.jpg" alt="Recruiter" class="profile-dropdown-header-avatar">
+            <span class="profile-dropdown-header-name">Recruiter</span>
+            <span class="profile-dropdown-header-status">Active</span>
+        </div>
+        <div class="profile-dropdown-list">
+            <div class="profile-dropdown-item" data-profile="explorer" data-page="explorer.html">
+                <img src="skyblue.jpg" alt="Explorer" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Explorer</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+            <div class="profile-dropdown-item" data-profile="developer" data-page="developer-profile.html">
+                <img src="red.png" alt="Developer" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Developer</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+            <div class="profile-dropdown-item active" data-profile="recruiter" data-page="recruiter-profile.html">
+                <img src="orange.jpg" alt="Recruiter" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Recruiter</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+            <div class="profile-dropdown-item" data-profile="stalker" data-page="stalker-profile.html">
+                <img src="green.jpg" alt="Stalker" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Stalker</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay to close dropdown -->
+    <div class="profile-dropdown-overlay" id="profileDropdownOverlay"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+               
+                <span class="logo-letter"> Fahad Ali</span>
+               
+            </div>
+            <ul class="nav-links">
+                <li><a href="profilepage.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="./Blog.html">Blogs</a></li>
+                <li><a href="university-projects.html">Projects</a></li>
+                <li><a href="hire-me.html">Hire Me</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <div class="mobile-logo">
+                    <span class="mobile-logo-letter">Fahad Ali</span>
+                </div>
+                <div class="mobile-close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="profilepage.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="./Blog.html">Blogs</a></li>
+                <li><a href="university-projects.html">Projects</a></li>
+                <li><a href="hire-me.html">Hire Me</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <video src="./recruiter.mp4" autoplay loop muted playsinline class="hero-image"></video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="series-label">F</span>
+                <span class="series-text">Portfolio</span>
+            </div>
+            
+            <h1 class="hero-title">FAHAD ALI</h1>
+            
+            <div class="hero-stats">
+                
+                <span class="ranking">Full Stack Engineer x AI/ML</span>
+                <span class="ranking">(in progress)</span>
+            </div>
+            
+            <p class="hero-description">
+                Aspiring Fullstack Engineer × AI, learning to build complete web applications using the MERN stack with RESTful APIs for smooth data communication. Focused on mastering responsive, user-friendly interfaces, efficient back-end systems, AI integration, and fast, reliable deployment for seamless user experiences.
+            </p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-play">
+                    <i class="fas fa-play"></i>
+                    Resume
+                </button>
+                <button class="btn btn-info">
+                    <i class="fas fa-info-circle"></i>
+                    LinkedIn
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div class="content-wrapper">
+        <!-- Today's Top Picks for recruiter -->
+        <section class="content-section">
+            <h2 class="section-title">Today's Top Picks for recruiter</h2>
+            <div class="content-row">
+                <div class="content-card" onclick="window.location.href='hire-me.html'">
+                    <div class="card-image">
+                        <video src="./hireme.mp4" autoplay muted loop></video>
+                        <div class="centered-title">Hire Me</div>
+                        <div class="card-netflix-logo"></div>
+                    </div>
+                </div>
+                <div class="content-card skills-card" id="skills-card">
+                    <div class="card-image">
+                        <video id="skills-video" src="./skillst.mp4" autoplay muted loop alt="Skills" playsinline></video>
+                        <div class="centered-title">Skills</div>
+                        <div class="card-netflix-logo"></div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-image">
+                        <video src="./universityprojects.mp4" autoplay muted loop></video>
+                        <div class="centered-title">University Projects</div>
+                        <div class="card-netflix-logo"></div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-image">
+                      <video src="fullstackprojects.mp4" autoplay muted loop></video>
+                        <div class="centered-title">Fullstack x AI Projects</div>
+                        <div class="card-netflix-logo"></div>
+                    </div>
+                </div>
+                <div class="content-card" onclick="window.location.href='engineering-map.html'">
+                    <div class="card-image">
+                        <video src="./engineeringmap.mp4" autoplay muted loop></video>
+                        <div class="centered-title">My Engineering Map</div>
+                        <div class="card-netflix-logo"></div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <!-- Continue Watching for recruiter -->
+        <section class="content-section">
+            <h2 class="section-title">Continue Watching for recruiter</h2>
+            <div class="content-row">
+                <div class="content-card">
+                    <div class="card-image">
+                        <video src="./design.mp4" autoplay muted loop></video>
+                        <div class="centered-title">Design Originals</div>
+                        <div class="card-netflix-logo"></div>
+                    </div>
+                </div>
+               <div class="content-card">
+                    <div class="card-image">
+                        <video src="./blogs.mp4" autoplay muted loop></video>
+                        <div class="centered-title">Blogs</div>
+                        <div class="card-netflix-logo"></div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="card-image">
+                        <video src="./contactme.mp4" autoplay muted loop></video>
+                        <div class="centered-title">Contact Me</div>
+                        <div class="card-netflix-logo"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="profilelogic.js"></script>
+    <script src="profile-switcher.js"></script>
+  
+</body>
+</html> 

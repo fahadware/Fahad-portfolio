@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio.com</title>
+    <link rel="stylesheet" href="profilepage.css">
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo-container">
+        <div class="logo-text">Fahad Ali</div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <div class="container">
+            <h1 class="title">Who's Watching?</h1>
+            
+            <div class="profiles-container">
+                <div class="profile-card" onclick="selectProfile('stalker')">
+                    <img src="green.jpg" alt="Stalker" class="profile-icon">
+                   
+                    <div class="profile-name">  &lt;/Stalker&gt </div>
+                </div>
+                
+                <div class="profile-card" onclick="selectProfile('recruiter')">
+                    <img src="orange.jpg" alt="Recruiter" class="profile-icon">
+                    <div class="profile-name">&lt;/Recruiter&gt</div>
+                </div>
+                <!-- Developer -->
+                <div class="profile-card" onclick="selectProfile('developer')">
+                    <img src="red.png" alt="Developer" class="profile-icon">
+                    <div class="profile-name">&lt;/Developer&gt</div>
+                </div>
+                
+                <div class="profile-card" onclick="selectProfile('explorer')">
+                    <img src="skyblue.jpg" alt="Explorer" class="profile-icon">
+                    <div class="profile-name">&lt;/Explorer&gt</div>
+                </div>
+            </div>
+            
+            <button class="manage-profiles">Select Profile</button>
+        </div>
+    </div>
+
+    <script src="profile-selection.js"></script>
+</body>
+</html>

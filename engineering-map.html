@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Map - Fahad Ali Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MainStyle.css">
+    <link rel="stylesheet" href="engineering-map.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Profile Switcher Button -->
+    <div class="profile-switcher" id="profileSwitcher">
+        <img src="red.png" alt="Developer" class="profile-switcher-avatar">
+        <span class="profile-switcher-name">Developer</span>
+        <i class="fas fa-chevron-down profile-switcher-icon"></i>
+    </div>
+
+    <!-- Profile Dropdown Menu -->
+    <div class="profile-dropdown-menu" id="profileDropdownMenu">
+        <div class="profile-dropdown-header">
+            <img src="red.png" alt="Developer" class="profile-dropdown-header-avatar">
+            <span class="profile-dropdown-header-name">Developer</span>
+            <span class="profile-dropdown-header-status">Active</span>
+        </div>
+        <div class="profile-dropdown-list">
+            <div class="profile-dropdown-item" data-profile="explorer" data-page="explorer.html">
+                <img src="skyblue.jpg" alt="Explorer" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Explorer</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+            <div class="profile-dropdown-item active" data-profile="developer" data-page="developer-profile.html">
+                <img src="red.png" alt="Developer" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Developer</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+            <div class="profile-dropdown-item" data-profile="recruiter" data-page="recruiter-profile.html">
+                <img src="orange.jpg" alt="Recruiter" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Recruiter</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+            <div class="profile-dropdown-item" data-profile="stalker" data-page="stalker-profile.html">
+                <img src="green.jpg" alt="Stalker" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Stalker</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay to close dropdown -->
+    <div class="profile-dropdown-overlay" id="profileDropdownOverlay"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-letter">Fahad Ali</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="profilepage.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="./Blog.html">Blogs</a></li>
+                <li><a href="university-projects.html">Projects</a></li>
+                <li><a href="hire-me.html">Hire Me</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <div class="mobile-logo">
+                    <span class="mobile-logo-letter">Fahad Ali</span>
+                </div>
+                <div class="mobile-close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="profilepage.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="./Blog.html">Blogs</a></li>
+                <li><a href="university-projects.html">Projects</a></li>
+                <li><a href="hire-me.html">Hire Me</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Engineering Map Hero Section -->
+    <section class="engineering-hero">
+        <div class="engineering-hero-background">
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="engineering-hero-content">
+            <h1 class="hero-title">Engineering Journey Map</h1>
+            <p class="hero-subtitle">From "Hello World" to Building the Systems - One Skill at a Time</p>
+            <div class="progress-overview">
+                <div class="progress-stat">
+                    <span class="progress-number" id="completedCount">0</span>
+                    <span class="progress-label">Completed</span>
+                </div>
+                <div class="progress-stat">
+                    <span class="progress-number" id="pendingCount">0</span>
+                    <span class="progress-label">In Progress</span>
+                </div>
+                <div class="progress-stat">
+                    <span class="progress-number" id="totalCount">0</span>
+                    <span class="progress-label">Total Skills</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Map Content -->
+    <section class="engineering-content">
+        <div class="map-container">
+            <!-- Programming Fundamentals -->
+            <div class="skill-category">
+                <h2 class="category-title">
+                    <i class="fas fa-code"></i>
+                    Programming Fundamentals
+                </h2>
+                <div class="skills-row">
+                    <div class="skill-item completed" data-skill="c">
+                        <div class="skill-icon">
+                            <i class="fab fa-cuttlefish"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">C Programming</h3>
+                            <p class="skill-description">Foundation programming language</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item completed" data-skill="cpp">
+                        <div class="skill-icon">
+                            <i class="fab fa-cuttlefish"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">C++</h3>
+                            <p class="skill-description">Object-oriented programming</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item completed" data-skill="oop">
+                        <div class="skill-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">OOP</h3>
+                            <p class="skill-description">Object-Oriented Programming</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Computer Science Core -->
+            <div class="skill-category">
+                <h2 class="category-title">
+                    <i class="fas fa-brain"></i>
+                    Computer Science Core
+                </h2>
+                <div class="skills-row">
+                    <div class="skill-item completed" data-skill="ds">
+                        <div class="skill-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Data Structures</h3>
+                            <p class="skill-description">Efficient data organization</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item completed" data-skill="algorithms">
+                        <div class="skill-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Algorithms</h3>
+                            <p class="skill-description">Problem-solving techniques</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item pending" data-skill="database">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Database Systems</h3>
+                            <p class="skill-description">Database design and management</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item pending" data-skill="os">
+                        <div class="skill-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Operating Systems</h3>
+                            <p class="skill-description">OS concepts and principles</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design -->
+            <div class="skill-category">
+                <h2 class="category-title">
+                    <i class="fas fa-palette"></i>
+                    Design & User Experience
+                </h2>
+                <div class="skills-row">
+                    <div class="skill-item completed" data-skill="uiux">
+                        <div class="skill-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">UI/UX Design</h3>
+                            <p class="skill-description">User interface design</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item completed" data-skill="webdesign">
+                        <div class="skill-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Web Design</h3>
+                            <p class="skill-description">Website design principles</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Development -->
+            <div class="skill-category">
+                <h2 class="category-title">
+                    <i class="fas fa-paint-brush"></i>
+                    Frontend Development
+                </h2>
+                <div class="skills-row">
+                    <div class="skill-item completed" data-skill="html">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">HTML</h3>
+                            <p class="skill-description">Markup language</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item completed" data-skill="css">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">CSS</h3>
+                            <p class="skill-description">Styling and layout</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item completed" data-skill="tailwind">
+                        <div class="skill-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Tailwind CSS</h3>
+                            <p class="skill-description">Utility-first CSS framework</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item completed" data-skill="react">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">React</h3>
+                            <p class="skill-description">JavaScript library for UI</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Development -->
+            <div class="skill-category">
+                <h2 class="category-title">
+                    <i class="fas fa-server"></i>
+                    Backend Development
+                </h2>
+                <div class="skills-row">
+                    <div class="skill-item pending" data-skill="nodejs">
+                        <div class="skill-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Node.js</h3>
+                            <p class="skill-description">JavaScript runtime</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item pending" data-skill="express">
+                        <div class="skill-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Express.js</h3>
+                            <p class="skill-description">Web framework for Node.js</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item pending" data-skill="restapi">
+                        <div class="skill-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">RESTful APIs</h3>
+                            <p class="skill-description">API design and development</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item pending" data-skill="mongodb">
+                        <div class="skill-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">MongoDB</h3>
+                            <p class="skill-description">NoSQL database</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DevOps & Deployment -->
+            <div class="skill-category">
+                <h2 class="category-title">
+                    <i class="fas fa-rocket"></i>
+                    DevOps & Deployment
+                </h2>
+                <div class="skills-row">
+                    <div class="skill-item pending" data-skill="docker">
+                        <div class="skill-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Docker</h3>
+                            <p class="skill-description">Containerization</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item pending" data-skill="cicd">
+                        <div class="skill-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">CI/CD Pipelines</h3>
+                            <p class="skill-description">Continuous integration</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+
+                    <div class="skill-item pending" data-skill="deployment">
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Deployment</h3>
+                            <p class="skill-description">Application deployment</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Integration -->
+            <div class="skill-category">
+                <h2 class="category-title">
+                    <i class="fas fa-robot"></i>
+                    Artificial Intelligence
+                </h2>
+                <div class="skills-row">
+                    <div class="skill-item pending" data-skill="ai">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">AI Integration</h3>
+                            <p class="skill-description">AI-powered applications</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    <div class="skill-item pending" data-skill="ai">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3 class="skill-name">Machine Learning</h3>
+                            <p class="skill-description">Machine Learning</p>
+                        </div>
+                        <div class="skill-status">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="profilelogic.js"></script>
+    <script src="profile-switcher.js"></script>
+    <script src="engineering-map.js"></script>
+</body>
+</html>

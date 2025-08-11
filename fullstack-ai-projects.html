@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack x AI Projects - Fahad Ali Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MainStyle.css">
+    <link rel="stylesheet" href="fullstack-ai-projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Profile Switcher Button -->
+    <div class="profile-switcher" id="profileSwitcher">
+        <img src="red.png" alt="Developer" class="profile-switcher-avatar">
+        <span class="profile-switcher-name">Developer</span>
+        <i class="fas fa-chevron-down profile-switcher-icon"></i>
+    </div>
+
+    <!-- Profile Dropdown Menu -->
+    <div class="profile-dropdown-menu" id="profileDropdownMenu">
+        <div class="profile-dropdown-header">
+            <img src="red.png" alt="Developer" class="profile-dropdown-header-avatar">
+            <span class="profile-dropdown-header-name">Developer</span>
+            <span class="profile-dropdown-header-status">Active</span>
+        </div>
+        <div class="profile-dropdown-list">
+            <div class="profile-dropdown-item" data-profile="explorer" data-page="explorer.html">
+                <img src="skyblue.jpg" alt="Explorer" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Explorer</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+            <div class="profile-dropdown-item active" data-profile="developer" data-page="developer-profile.html">
+                <img src="red.png" alt="Developer" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Developer</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+            <div class="profile-dropdown-item" data-profile="recruiter" data-page="recruiter-profile.html">
+                <img src="orange.jpg" alt="Recruiter" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Recruiter</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+            <div class="profile-dropdown-item" data-profile="stalker" data-page="stalker-profile.html">
+                <img src="green.jpg" alt="Stalker" class="profile-dropdown-item-avatar">
+                <span class="profile-dropdown-item-name">Stalker</span>
+                <i class="fas fa-check profile-dropdown-item-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay to close dropdown -->
+    <div class="profile-dropdown-overlay" id="profileDropdownOverlay"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-letter">Fahad Ali</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="profilepage.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="./Blog.html">Blogs</a></li>
+                <li><a href="university-projects.html">Projects</a></li>
+                <li><a href="hire-me.html">Hire Me</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <div class="mobile-logo">
+                    <span class="mobile-logo-letter">Fahad Ali</span>
+                </div>
+                <div class="mobile-close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="profilepage.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="./Blog.html">Blogs</a></li>
+                <li><a href="university-projects.html">Projects</a></li>
+                <li><a href="hire-me.html">Hire Me</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Fullstack x AI Projects Hero Section -->
+    <section class="fullstack-hero">
+        <div class="fullstack-hero-background">
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="fullstack-hero-content">
+            <h1 class="hero-title">Fullstack x AI Projects</h1>
+            <p class="hero-subtitle">Coming Soon</p>
+            <div class="coming-soon-banner">
+                <i class="fas fa-clock"></i>
+                <span>Projects are Pending</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Filter (Netflix-inspired dropdown) -->
+    <div class="projects-filter" id="projectsFilter">
+        <button class="filter-trigger" id="filterTrigger" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-sliders-h"></i>
+            <span>Filter</span>
+            <i class="fas fa-chevron-down chevron" aria-hidden="true"></i>
+        </button>
+        <div class="filter-menu" id="filterMenu" role="menu" aria-label="Filter projects">
+            <button class="filter-menu-item" role="menuitem" data-target="university">
+                <i class="fas fa-graduation-cap"></i>
+                <span>University</span>
+            </button>
+            <button class="filter-menu-item active" role="menuitem" data-target="fullstack-ai">
+                <i class="fas fa-robot"></i>
+                <span>Fullstack × AI</span>
+                <i class="fas fa-check check" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+ 
+    
+    
+    </section>
+
+    <script src="profilelogic.js"></script>
+    <script src="profile-switcher.js"></script>
+    <script src="fullstack-ai-projects.js"></script>
+</body>
+</html>
