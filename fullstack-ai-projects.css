@@ -125,13 +125,13 @@
 .filter-menu-item.active .check { display: inline-block; }
 
 @media (max-width: 768px) {
-    .projects-filter { top: 10px; right: 3%; }
+    .projects-filter { top: 50px; right: 3%; }
     .filter-trigger { padding: 8px 12px; font-size: 0.85rem; }
     .filter-menu { right: 0; min-width: 200px; }
 }
 
 @media (max-width: 480px) {
-    .projects-filter { top: 10px; right: 2%; }
+    .projects-filter { top: 100px; right: 2%; }
     .filter-trigger { padding: 8px 10px; font-size: 0.8rem; gap: 6px; }
     .filter-menu { right: 0; min-width: 180px; }
 }
