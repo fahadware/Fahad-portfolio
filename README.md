@@ -1,7 +1,7 @@
 # 🎬 Netflix-Inspired Portfolio Website – Fahad Ali
 
 Welcome to my **Netflix-inspired Portfolio Website** – a unique and immersive way to explore my work, skills, and creative projects.  
-I’ve blended **modern UI/UX design** with a cinematic feel to make my portfolio look less like a static website and more like a streaming platform.
+I’ve blended **modern  design** with a cinematic feel to make my portfolio look less like a  website and more like a streaming platform.
 
 ---
 
@@ -33,7 +33,7 @@ Inspired by **Netflix's clean, immersive design**, the site features:
 
 
 ## 🌟 Live Demo  
-🔗 **[View My Portfolio](https://your-portfolio-link.com)**
+🔗 **[View My Portfolio](https://fahadware.github.io/Fahad-portfolio/)**
 
 
 
